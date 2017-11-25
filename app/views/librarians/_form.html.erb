@@ -1,0 +1,47 @@
+<%= form_with(model: librarian, local: true) do |form| %>
+  <% if librarian.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(librarian.errors.count, "error") %> prohibited this librarian from being saved:</h2>
+
+      <ul>
+      <% librarian.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :librarian_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :surname %>
+    <%= form.text_field :surname, id: :librarian_surname %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_field :address, id: :librarian_address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phone_number %>
+    <%= form.text_field :phone_number, id: :librarian_phone_number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email, id: :librarian_email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :passport_code %>
+    <%= form.text_field :passport_code, id: :librarian_passport_code %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

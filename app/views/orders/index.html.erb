@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Orders</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Order date</th>
+      <th>Librarian</th>
+      <th>User</th>
+      <th>Price</th>
+      <th>Number of books</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @orders.each do |order| %>
+      <tr>
+        <td><%= order.order_date %></td>
+        <td><%= Librarian.find(order.librarian_id).name + ' ' + Librarian.find(order.librarian_id).surname %></td>
+        <td><%= User.find(order.user_id).name + ' ' + User.find(order.user_id).surname %></td>
+        <td><%= order.price %></td>
+        <td><%= order.books.count %></td>
+        <td><%= link_to 'Show', order %></td>
+        <td><%= link_to 'Edit', edit_order_path(order) %></td>
+        <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Order', new_order_path %>

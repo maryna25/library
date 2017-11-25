@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @librarian.name %>
+</p>
+
+<p>
+  <strong>Surname:</strong>
+  <%= @librarian.surname %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @librarian.address %>
+</p>
+
+<p>
+  <strong>Phone number:</strong>
+  <%= @librarian.phone_number %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @librarian.email %>
+</p>
+
+<p>
+  <strong>Passport code:</strong>
+  <%= @librarian.passport_code %>
+</p>
+
+<%= link_to 'Edit', edit_librarian_path(@librarian) %> |
+<%= link_to 'Back', librarians_path %>
