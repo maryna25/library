@@ -1,79 +1,89 @@
-<div>
-  <%= link_to 'Librarians', librarians_path %>
-  <%= link_to 'Users', users_path %>
-  <%= link_to 'Books', books_path %>
-  <%= link_to 'Magazines', magazines_path %>
-  <%= link_to 'Orders', orders_path %>
-  <%= link_to 'Authors', authors_path %>
+<div class="row container">
+  <%= link_to 'Librarians', librarians_path, class: 'btn' %>
+  <%= link_to 'Users', users_path, class: 'btn' %>
+  <%= link_to 'Books', books_path, class: 'btn' %>
+  <%= link_to 'Magazines', magazines_path, class: 'btn' %>
+  <%= link_to 'Orders', orders_path, class: 'btn' %>
+  <%= link_to 'Authors', authors_path, class: 'btn' %>
 </div>
-<div>
-  <div>
+<div class="container">
+  <div class="row">
     Знайти прізвища та імена бібліотекарів, що оформили замовлення вартістю n
   </div>
-  <div>
+  <div class="row">
     <span>Price:</span>
     <input type="number" id="input1">
+    <button id="btn1" class="btn-sm">Find</button>
+    <div id="div1"></div>
   </div>
-  <button id="btn1">Find</button>
-  <div id="div1"></div>
 
-  <div>
+  <div class="row">
     Знайти прізвища авторів, у є книжка заданого жанру
   </div>
-  <div>
+  <div class="row">
     <span>Genre:</span>
     <input type="text" id="input2">
+    <button id="btn2" class="btn-sm">Find</button>
+    <div id="div2"></div>
   </div>
-  <button id="btn2">Find</button>
-  <div id="div2"></div>
 
-  <div>
+  <div class="row">
     Знайти прізвища авторів, які написали книжки не заданого жанру
   </div>
-  <div>
+  <div class="row">
     <span>Genre:</span>
     <input type="text" id="input3">
+    <button id="btn3" class="btn-sm">Find</button>
+    <div id="div3"></div>
   </div>
-  <button id="btn3">Find</button>
-  <div id="div3"></div>
 
-  <div>
+  <div class="row">
     Знайти прізвища авторів, які не написали книжки заданого жанру
   </div>
-  <div>
+  <div class="row">
     <span>Genre:</span>
     <input type="text" id="input4">
+    <button id="btn4" class="btn-sm">Find</button>
+    <div id="div4"></div>
   </div>
-  <button id="btn4">Find</button>
-  <div id="div4"></div>
 
-  <div>
+  <div class="row">
     Знайти прізвища користувачів, які не робили замовлення на n гривень
   </div>
-  <div>
+  <div class="row">
     <span>Price:</span>
     <input type="number" id="input5">
+    <button id="btn5" class="btn-sm">Find</button>
+    <div id="div5"></div>
   </div>
-  <button id="btn5">Find</button>
-  <div id="div5"></div>
 
-  <div>
+  <div class="row">
     Знайти прізвища бібліотекарів, які видали більше або рівно 2 замовлення людям з даним іменем
   </div>
-  <div>
+  <div class="row">
     <span>Name:</span>
     <input type="text" id="input6">
+    <button id="btn6" class="btn-sm">Find</button>
+    <div id="div6"></div>
   </div>
-  <button id="btn6">Find</button>
-  <div id="div6"></div>
 
-  <div>
+  <div class="row">
     Знайти кількість бібліотекарів, які видали більше або рівно 2 замовлення людям з даним іменем
   </div>
-  <div>
+  <div class="row">
     <span>Name:</span>
     <input type="text" id="input7">
+    <button id="btn7" class="btn-sm">Find</button>
+    <div id="div7"></div>
   </div>
-  <button id="btn7">Find</button>
-  <div id="div7"></div>
+
+  <div class="row">
+    Знайти прізвища бібліотекарів, які видали принаймні всі книжки з зaдаданим ім'ям
+  </div>
+  <div class="row">
+    <span>Name:</span>
+    <input type="text" id="input8">
+    <button id="btn8" class="btn-sm">Find</button>
+    <div id="div8"></div>
+  </div>
 </div>

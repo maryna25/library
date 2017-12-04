@@ -1,13 +1,13 @@
 Rails.application.routes.draw do
   get 'welcome/index'
-  post 'welcome/first_task', to: 'welcome#first_task'
-  post 'welcome/second_task', to: 'welcome#second_task'
-  post 'welcome/third_task', to: 'welcome#third_task'
-  post 'welcome/task4', to: 'welcome#task4'
-  post 'welcome/task5', to: 'welcome#task5'
-  post 'welcome/task6', to: 'welcome#task6'
-  post 'welcome/task7', to: 'welcome#task7'
-  post 'welcome/task8', to: 'welcome#task8'
+  get 'welcome/first_task', to: 'welcome#first_task'
+  get 'welcome/second_task', to: 'welcome#second_task'
+  get 'welcome/third_task', to: 'welcome#third_task'
+  get 'welcome/task4', to: 'welcome#task4'
+  get 'welcome/task5', to: 'welcome#task5'
+  get 'welcome/task6', to: 'welcome#task6'
+  get 'welcome/task7', to: 'welcome#task7'
+  get 'welcome/task8', to: 'welcome#task8'
 
   root 'welcome#index'
 
