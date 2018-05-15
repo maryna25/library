@@ -13,74 +13,74 @@
 ActiveRecord::Schema.define(version: 20171125224134) do
 
   create_table "authors", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string "name"
-    t.string "surname"
-    t.string "country_of_birth"
-    t.string "country_of_death"
-    t.integer "year_of_birth"
-    t.string "gender"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "name"
+    t.string   "surname"
+    t.string   "country_of_birth"
+    t.string   "country_of_death"
+    t.integer  "year_of_birth"
+    t.string   "gender"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
   end
 
   create_table "books", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string "name"
-    t.string "genre"
-    t.integer "year"
+    t.string   "name"
+    t.string   "genre"
+    t.integer  "year"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "author_id"
-    t.index ["author_id"], name: "index_books_on_author_id"
+    t.integer  "author_id"
+    t.index ["author_id"], name: "index_books_on_author_id", using: :btree
   end
 
   create_table "books_orders", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.bigint "book_id", null: false
-    t.bigint "order_id", null: false
+    t.integer "book_id",  null: false
+    t.integer "order_id", null: false
   end
 
   create_table "librarians", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string "name"
-    t.string "surname"
-    t.string "address"
-    t.string "phone_number"
-    t.string "email"
-    t.string "passport_code"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "name"
+    t.string   "surname"
+    t.string   "address"
+    t.string   "phone_number"
+    t.string   "email"
+    t.string   "passport_code"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   create_table "magazines", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string "name"
-    t.integer "issue_number"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "name"
+    t.integer  "issue_number"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   create_table "magazines_orders", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.bigint "magazine_id", null: false
-    t.bigint "order_id", null: false
+    t.integer "magazine_id", null: false
+    t.integer "order_id",    null: false
   end
 
   create_table "orders", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.datetime "order_date"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.bigint "user_id"
-    t.bigint "librarian_id"
-    t.integer "price"
-    t.index ["librarian_id"], name: "index_orders_on_librarian_id"
-    t.index ["user_id"], name: "index_orders_on_user_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.integer  "user_id"
+    t.integer  "librarian_id"
+    t.integer  "price"
+    t.index ["librarian_id"], name: "index_orders_on_librarian_id", using: :btree
+    t.index ["user_id"], name: "index_orders_on_user_id", using: :btree
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string "name"
-    t.string "surname"
-    t.string "adress"
-    t.string "email"
-    t.string "phone_number"
-    t.integer "lib_ticket_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "name"
+    t.string   "surname"
+    t.string   "adress"
+    t.string   "email"
+    t.string   "phone_number"
+    t.integer  "lib_ticket_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   add_foreign_key "books", "authors"

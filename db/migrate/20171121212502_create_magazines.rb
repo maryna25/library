@@ -1,4 +1,4 @@
-class CreateMagazines < ActiveRecord::Migration[5.1]
+class CreateMagazines < ActiveRecord::Migration[5.0]
   def change
     create_table :magazines do |t|
       t.string :name

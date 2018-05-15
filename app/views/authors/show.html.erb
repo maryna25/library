@@ -1,34 +1,36 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @author.name %>
-</p>
+<div class="container">
+  <p>
+    <strong>Name:</strong>
+    <%= @author.name %>
+  </p>
 
-<p>
-  <strong>Surname:</strong>
-  <%= @author.surname %>
-</p>
+  <p>
+    <strong>Surname:</strong>
+    <%= @author.surname %>
+  </p>
 
-<p>
-  <strong>Country of birth:</strong>
-  <%= @author.country_of_birth %>
-</p>
+  <p>
+    <strong>Country of birth:</strong>
+    <%= @author.country_of_birth %>
+  </p>
 
-<p>
-  <strong>Country of death:</strong>
-  <%= @author.country_of_death %>
-</p>
+  <p>
+    <strong>Country of death:</strong>
+    <%= @author.country_of_death %>
+  </p>
 
-<p>
-  <strong>Year of birth:</strong>
-  <%= @author.year_of_birth %>
-</p>
+  <p>
+    <strong>Year of birth:</strong>
+    <%= @author.year_of_birth %>
+  </p>
 
-<p>
-  <strong>Gender:</strong>
-  <%= @author.gender %>
-</p>
+  <p>
+    <strong>Gender:</strong>
+    <%= @author.gender %>
+  </p>
 
-<%= link_to 'Edit', edit_author_path(@author) %> |
-<%= link_to 'Back', authors_path %>
+  <%= link_to 'Edit', edit_author_path(@author) %> |
+  <%= link_to 'Back', authors_path %>
+</div>

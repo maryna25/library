@@ -1,35 +1,37 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <div>
-    <strong>Order date:</strong>
-    <%= @order.order_date %>
-  </div>
-  <div>
-    <strong>Price:</strong>
-    <%= @order.price %>
-  </div>
-  <div>
-    <strong>Librarian: </strong>
-    <%= Librarian.find(@order.librarian_id).name + ' ' + Librarian.find(@order.librarian_id).surname %>
-  </div>
-  <div>
-    <strong>User: </strong>
-    <%= User.find(@order.user_id).name + ' ' + User.find(@order.user_id).surname %>
-  </div>
-  <% @order.books.each do |book| %>
+<div class="container">
+  <p>
     <div>
-      <strong>Book: </strong>
-      <%= book.name %>
+      <strong>Order date:</strong>
+      <%= @order.order_date %>
     </div>
-  <% end %>
-  <% @order.magazines.each do |magazine| %>
     <div>
-      <strong>Magazine: </strong>
-      <%= magazine.name %>
+      <strong>Price:</strong>
+      <%= @order.price %>
     </div>
-  <% end %>
-</p>
+    <div>
+      <strong>Librarian: </strong>
+      <%= Librarian.find(@order.librarian_id).name + ' ' + Librarian.find(@order.librarian_id).surname %>
+    </div>
+    <div>
+      <strong>User: </strong>
+      <%= User.find(@order.user_id).name + ' ' + User.find(@order.user_id).surname %>
+    </div>
+    <% @order.books.each do |book| %>
+      <div>
+        <strong>Book: </strong>
+        <%= book.name %>
+      </div>
+      <% end %>
+      <% @order.magazines.each do |magazine| %>
+      <div>
+        <strong>Magazine: </strong>
+        <%= magazine.name %>
+      </div>
+      <% end %>
+    </p>
 
-<%= link_to 'Edit', edit_order_path(@order) %> |
-<%= link_to 'Back', orders_path %>
+    <%= link_to 'Edit', edit_order_path(@order) %> |
+    <%= link_to 'Back', orders_path %>
+</div>

@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Librarians</h1>
+<table class="table">
+  <tr>
+    <td><h1>Librarians</h1></td>
+    <td><%= link_to 'New Librarian', new_librarian_path, class: 'btn btn-info float-right' %></td>
+  </tr>
+</table>
 
 <table class="table table-striped">
   <thead>
@@ -31,7 +36,3 @@
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Librarian', new_librarian_path %>
