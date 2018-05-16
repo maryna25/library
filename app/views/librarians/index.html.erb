@@ -36,3 +36,7 @@
     <% end %>
   </tbody>
 </table>
+
+<div class="d-flex justify-content-center">
+  <%= will_paginate @librarians, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
+</div>

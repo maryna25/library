@@ -4,7 +4,7 @@ class MagazinesController < ApplicationController
   # GET /magazines
   # GET /magazines.json
   def index
-    @magazines = Magazine.all
+    @magazines = Magazine.paginate(:page => params[:page], :per_page => 10)
   end
 
   # GET /magazines/1

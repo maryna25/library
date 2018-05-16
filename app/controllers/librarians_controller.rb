@@ -4,7 +4,7 @@ class LibrariansController < ApplicationController
   # GET /librarians
   # GET /librarians.json
   def index
-    @librarians = Librarian.all
+    @librarians = Librarian.paginate(:page => params[:page], :per_page => 10)
   end
 
   # GET /librarians/1
